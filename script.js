@@ -90,10 +90,20 @@ let startGameBtnClick = () => {
         printUsersResults()
         document.querySelector('.resultText').textContent = playingUser.score
     },
-    10000)
+    100000)
 }
 let clickCounterBtnClick = () => {
     clickCounter++
+    let newXposition = Math.round(Math.random()*window.innerWidth)*0.65
+    let newYposition = Math.round(Math.random()*window.innerHeight)*0.9
+    clickCounterBtn.style.position = "absolute"
+    clickCounterBtn.style.top = newYposition + 'px'
+    clickCounterBtn.style.left = newXposition + 'px'
+    let newWidth = Math.floor(Math.random()*700)
+    let newHeight = Math.floor(Math.random()*700)
+    clickCounterBtn.style.width = newWidth + 'px'
+    clickCounterBtn.style.height = newHeight + 'px'
+
 }
 let playAgainBtnClick = () => {
     location.reload()
